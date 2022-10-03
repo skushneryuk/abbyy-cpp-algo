@@ -5,12 +5,18 @@ class Prism {
 double height;
 public:
     Prism(double height): height(height) {}
+
     double Volume() const {
         return Square() * height;
     }
+
     virtual double Square() const = 0;
+
     // К этому классу есть одно замечание.
     // В качестве подсказки рекомендую еще раз посмотреть презентацию к первой лекции.
+
+    // Вот что можно добавить
+    virtual ~Prism() = 0;
 };
 
 class Box : public Prism {
