@@ -16,7 +16,7 @@ public:
     // В качестве подсказки рекомендую еще раз посмотреть презентацию к первой лекции.
 
     // Вот что можно добавить
-    virtual ~Prism() = 0;
+    virtual ~Prism() = default;
 };
 
 class Box : public Prism {
@@ -27,11 +27,17 @@ public:
     virtual double Square() const override {
         return side * side;
     }
+
+    // И вот это
+    virtual ~Box() = default;
 };
 
 class Cube : public Box {
 public:
     Cube(double side): Box(side, side) {}
+
+    // И еще вот тут
+    virtual ~Cube() = default;
 };
 
 int main() {
