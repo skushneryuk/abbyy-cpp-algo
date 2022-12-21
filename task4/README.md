@@ -1,6 +1,8 @@
 ## Hometask 4
 -----------
 
+Код в задачах запускается с помощью `g++ -std=c++20 solution.cpp -o solution.exe && ./solution.exe` (+ `< input.txt` для задачи 4.4)
+
 #### Задача 1. Ranges 1
 
 > [Код](./task4.1)
